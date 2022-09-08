@@ -77,12 +77,12 @@ params:
     Content: I’m Chris Reinhardt. A web developer and designer based in Portland Oregon, by way of New Hampshire. View some of my projects below, follow me on Instagram, or shoot me an email.
 
   socialIcons:
-    - name: twitter
-      url: "https://twitter.com/"
-    - name: stackoverflow
-      url: "https://stackoverflow.com"
     - name: github
-      url: "https://github.com/"
+      url: "https://github.com/cjreinhardt"
+    - name: instagram
+      url: "https://www.instagram.com/creinhardt/"
+    - name: twitter
+      url: "https://twitter.com/cjreinhardt"
 
   analytics:
     google:
