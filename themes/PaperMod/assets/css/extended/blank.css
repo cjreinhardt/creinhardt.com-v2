@@ -1,0 +1,128 @@
+/*
+This is just a placeholder blank stylesheet so as to support adding custom styles budled with theme's default styles
+
+Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-css-with-themes-assets for more info
+*/
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 5px); }
+    100%   { transform: translate(0, -0px); }   
+}
+.floating { 
+    animation-name: floating;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+ 
+
+.z-layer:not(:first-child) {
+	color: #333;
+}
+
+
+/*Add rainbow color animation to logo*/
+
+.logo a {
+   font-size: 2em;
+    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+background-size: 1800% 1800%;
+    background-clip: text;
+text-fill-color: transparent;
+/*text-shadow: 2px 0px 0px #201d1d38;*/
+     -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+-webkit-animation: rainbow 18s ease infinite;
+-z-animation: rainbow 18s ease infinite;
+-o-animation: rainbow 18s ease infinite;
+  animation: rainbow 18s ease infinite; background-clip: text;}
+
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+}
+
+
+/*Remove below later*/
+/*Animated H2s on hover*/
+h2 {
+  font-size:3em !important;
+  /* Fallback: Set a background color. */
+  background-color: #fff;
+  
+  /* Create the gradient. */
+  background-image: linear-gradient(
+    45deg,
+    #ffffff 50%,
+    #cf4444 50%
+  );
+  
+  /* Set the background size and repeat properties. */
+  background-size: 270%;
+  background-repeat: repeat;
+  background-position: top right;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  animation: button-animation 0.65s 0.15s ease-out forwards;
+}
+
+h2:hover{
+    animation: button-animation-rev 0.65s ease-out forwards;
+}
+
+h2:hover {
+  transition: 0.5s;
+}
+
+@keyframes button-animation {
+  0% {
+    background-position: top right;
+  }
+  100% {
+    background-position: top left;
+  }
+}
+
+@keyframes button-animation-rev {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+
+#profilePhoto{
+	border-radius:8px;
+}
+
+.post-entry:active {
+    transform: unset;
+}
